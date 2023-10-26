@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        {% block meta %}
+        {% endblock meta %}
+        
+    </head>
+
+    <body>
+        {% include '_header.html' %}
+        {% block content %}
+        {% endblock content %}
+        {% include '_footer.html' %}
+    </body>
+</html>
