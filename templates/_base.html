@@ -1,3 +1,5 @@
+{% load compress %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,12 +8,12 @@
             name="viewport"
             content="width=device-width, initial-scale=1.0"
         />
-        {% load bootstrap5 %}
-        {% bootstrap_css %}
-        {% bootstrap_javascript %}
         {% block meta %}
         {% endblock meta %}
-        
+        {% compress css %}
+        <link rel="stylesheet"
+            href="{% static 'src/output.css' %}">
+        {% endcompress %}
     </head>
 
     <body>
