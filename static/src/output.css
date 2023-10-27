@@ -834,6 +834,10 @@ video {
   font-weight: 300;
 }
 
+.font-medium{
+  font-weight: 500;
+}
+
 .ordinal{
   --tw-ordinal: ordinal;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
@@ -908,6 +912,10 @@ video {
 .active\:bg-gray-100:active{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.active\:bg-bg_secondary:active{
+  background-color: var(--background-secondary);
 }
 
 @media (min-width: 768px){
