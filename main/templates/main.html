@@ -6,7 +6,15 @@
 {% endblock meta %}
 
 {% block content %}
-<main class="h-full bg-background my-auto">
-    <img src="{% static 'img/BookWorm.svg' %}">
+<main class="flex h-full font-bold w-50 bg-background my-auto justify-center items-center">
+    <div class="flex flex-row w-120">
+        <img src="{% static 'img/BookWorm.svg' %}" class="h-1/2 m-5">
+        <div class="flex justify-center justify-items-start w-96 flex-col m-5">
+            <h1 class="text-5xl leading-snug">Cari, Ulas Buku, dan Buat Daftar Bacamu</h1>
+            <a href="#_" class="px-4 py-2 font-light transition-all duration-150 bg-white rounded-full shadow outline-none active:bg-gray-100 hover:shadow-md focus:outline-none ease my-3">
+                Cari buku sekarang!
+            </a>
+        </div>
+    </div>
 </main>
 {% endblock content %}
