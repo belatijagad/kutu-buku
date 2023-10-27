@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: rgba(59, 237, 183, 0.15);
+    --background-secondary: rgba(59, 237, 183, 1);
+    --foreground: black;
+    --border: rgba(1, 1, 1, 0.5);
+  }
+}

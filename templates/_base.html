@@ -1,5 +1,6 @@
-{% load compress %}
 {% load static %}
+{% load compress %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,12 +12,11 @@
         {% block meta %}
         {% endblock meta %}
         {% compress css %}
-        <link rel="stylesheet"
-            href="{% static 'src/output.css' %}">
+        <link rel="stylesheet" href="{% static 'src/output.css' %}">
         {% endcompress %}
     </head>
 
-    <body>
+    <body class="flex h-screen flex-col">
         {% include '_header.html' %}
         {% block content %}
         {% endblock content %}
