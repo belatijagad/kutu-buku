@@ -8,7 +8,7 @@ media
 
 # Backup files
 *.bak 
-CACHE
+CACHE/
 output.css
 
 # If you are using PyCharm
