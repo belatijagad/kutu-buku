@@ -642,6 +642,10 @@ video {
   display: block;
 }
 
+.font-montserrat {
+  font-family: Montserrat, sans-serif;
+}
+
 .inline {
   display: inline;
 }

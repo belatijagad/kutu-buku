@@ -13,6 +13,10 @@ module.exports = {
         bg_secondary: 'var(--background-secondary)',
         foreground: 'var(--foreground)',
         border: 'var(--border)',
+      },
+      fontFamily: {
+        'raleway': ['Raleway', 'sans-serif'],
+        'montserrat': ['Montserrat', 'sans-serif']
       }
     },
   },
