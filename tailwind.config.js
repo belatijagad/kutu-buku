@@ -19,6 +19,15 @@ module.exports = {
         'montserrat': ['"Montserrat"', 'sans-serif']
       }
     },
+    extend: {
+      colors: {
+        // Using modern `rgb`
+        background: 'var(--background)',
+        bg_secondary: 'var(--background-secondary)',
+        foreground: 'var(--foreground)',
+        border: 'var(--border)',
+      }
+    },
   },
   plugins: [],
 }
