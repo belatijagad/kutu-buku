@@ -6,7 +6,7 @@ from .forms import ReviewForm
 def buku_detail(request, book_id):
     book = Book.objects.get(pk=book_id)
     ulasan = Ulasan.objects.filter(book=book)
-    
+
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -17,6 +17,6 @@ def buku_detail(request, book_id):
             return redirect('buku_detail', book_id=book_id)
     else:
         form = ReviewForm()
-    
+
     context = {'book': book, 'ulasan': ulasan, 'form': form}
     return render(request, 'ulasan.html', context)
