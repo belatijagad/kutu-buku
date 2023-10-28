@@ -7,9 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        // Using modern `rgb`
+        background: 'var(--background)',
+        bg_secondary: 'var(--background-secondary)',
+        foreground: 'var(--foreground)',
+        border: 'var(--border)',
+      },
       fontFamily: {
-        'raleway': ['Raleway', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif']
+        'raleway': ['"Raleway"', 'sans-serif'],
+        'montserrat': ['"Montserrat"', 'sans-serif']
       }
     },
   },

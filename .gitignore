@@ -7,7 +7,10 @@ db.sqlite3
 media
 
 # Backup files
-*.bak 
+*.bak
+CACHE/
+static/src/output.css
+node_modules/
 
 # If you are using PyCharm
 # User-specific stuff
@@ -135,3 +138,6 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# MacOS
+.DS_Store

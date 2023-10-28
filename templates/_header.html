@@ -1,0 +1,18 @@
+{% load static %}
+<header class="fixed w-full bg-white text-gray-700 border-b border-border body-font">
+  <div class="align-middle container flex flex-col items-start justify-between mx-auto md:flex-row">
+    <a class="flex my-auto items-center font-raleway text-background title-font">
+      <img src="{% static 'img/Logo.svg' %}">
+    </a>
+    <nav class="flex flex-wrap items-center justify-center text-foreground md:ml-auto md:mr-auto py-6">
+      <a href="#_" class="mr-5 font-raleway hover:text-gray-900">Daftar Membaca</a>
+      <a href="#_" class="mr-5 font-raleway hover:text-gray-900">Cari Buku</a>
+    </nav>
+    <div class="items-center h-full p-6">
+      <a href="#_" class="mr-5 font-raleway hover:text-gray-900">Login</a>
+      <a href="#_" class="px-4 py-2 font-raleway transition-all duration-150 bg-bg_secondary rounded-full shadow outline-none active:bg-background hover:shadow-md focus:outline-none ease">
+        Sign Up
+      </a>
+    </div>
+  </div>
+</header>
