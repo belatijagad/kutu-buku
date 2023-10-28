@@ -138,9 +138,5 @@ GitHub.sublime-settings
 !.vscode/extensions.json 
 .history
 
-<<<<<<< HEAD
 # MacOS
-=======
-#Mac OS
->>>>>>> e1865fdbd0ccde58be34995b74fb3df60ebfc28a
 .DS_Store
