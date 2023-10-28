@@ -9,7 +9,7 @@ media
 # Backup files
 *.bak
 CACHE/
-output.css
+static/src/output.css
 
 # If you are using PyCharm
 # User-specific stuff
