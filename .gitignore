@@ -8,6 +8,7 @@ media
 
 # Backup files
 *.bak 
+CACHE/
 
 # If you are using PyCharm
 # User-specific stuff
