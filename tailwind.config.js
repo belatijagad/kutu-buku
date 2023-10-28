@@ -15,8 +15,8 @@ module.exports = {
         border: 'var(--border)',
       },
       fontFamily: {
-        'raleway': ['Raleway', 'sans-serif'],
-        'montserrat': ['Montserrat', 'sans-serif']
+        'raleway': ['"Raleway"', 'sans-serif'],
+        'montserrat': ['"Montserrat"', 'sans-serif']
       }
     },
   },
