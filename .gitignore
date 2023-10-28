@@ -9,6 +9,7 @@ media
 # Backup files
 *.bak 
 CACHE/
+output.css
 
 # If you are using PyCharm
 # User-specific stuff
@@ -136,3 +137,6 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+# MacOS
+.DS_Store
