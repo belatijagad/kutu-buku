@@ -619,6 +619,14 @@ video {
   position: sticky;
 }
 
+.m-20 {
+  margin: 5rem;
+}
+
+.m-5 {
+  margin: 1.25rem;
+}
+
 .m-5{
   margin: 1.25rem;
 }
@@ -638,6 +646,11 @@ video {
   margin-bottom: auto;
 }
 
+.mx-5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
 .mb-3{
   margin-bottom: 0.75rem;
 }
@@ -648,10 +661,6 @@ video {
 
 .block{
   display: block;
-}
-
-.font-montserrat {
-  font-family: Montserrat, sans-serif;
 }
 
 .inline{
@@ -678,6 +687,10 @@ video {
   display: none;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-1\/2{
   height: 50%;
 }
@@ -690,12 +703,80 @@ video {
   height: 100vh;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .w-96{
   width: 24rem;
 }
 
 .w-full{
   width: 100%;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-0 {
+  width: 0px;
+}
+
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.max-w-\[\] {
+  max-width: ;
+}
+
+.max-w-\[50\] {
+  max-width: 50;
+}
+
+.max-w-\[50ch\] {
+  max-width: 50ch;
+}
+
+.max-w-\[10ch\] {
+  max-width: 10ch;
+}
+
+.max-w-\[ch\] {
+  max-width: ch;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .w-screen{
@@ -734,12 +815,20 @@ video {
   align-items: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-center{
   justify-content: center;
 }
 
 .justify-between{
   justify-content: space-between;
+}
+
+.justify-items-start {
+  justify-items: start;
 }
 
 .justify-items-start{
@@ -775,8 +864,22 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-red-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(127 29 29 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .p-6{
   padding: 1.5rem;
+}
+
+.p-20 {
+  padding: 5rem;
 }
 
 .px-4{
@@ -816,6 +919,14 @@ video {
   vertical-align: middle;
 }
 
+.font-raleway {
+  font-family: Raleway, sans-serif;
+}
+
+.font-montserrat {
+  font-family: Montserrat, sans-serif;
+}
+
 .font-raleway{
   font-family: "Raleway", sans-serif;
 }
@@ -830,13 +941,65 @@ video {
   line-height: 1.25rem;
 }
 
-.font-medium {
-  font-weight: 500;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
 }
 
 .ordinal{
   --tw-ordinal: ordinal;
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
+}
+
+.leading-10 {
+  line-height: 2.5rem;
+}
+
+.leading-loose {
+  line-height: 2;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
 }
 
 .leading-snug{
@@ -903,6 +1066,15 @@ video {
 
 .active\:bg-bg_secondary:active {
   background-color: var(--background-secondary);
+}
+
+.active\:bg-gray-100:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.active\:bg-background:active {
+  background-color: var(--background);
 }
 
 @media (min-width: 768px){
