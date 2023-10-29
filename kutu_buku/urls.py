@@ -21,4 +21,6 @@ urlpatterns = [
     path('', include('main.urls')),
     path('pencarian_buku/', include('pencarian_buku.urls')),
     path('buku/', include('halaman_buku.urls')),
+    path('pencarian_buku/', include('pencarian_buku.urls')),
+    path('', include('bookmark.urls'))
 ]

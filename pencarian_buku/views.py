@@ -3,9 +3,14 @@ from halaman_buku.models import Book
 # Create your views here.
 
 def pencarian_buku(request):
-    books = Book.objects.all()
-    categories = Book.objects.values_list('Category', flat=True).distinct()
-    return render(request, 'pencarian_buku.html', {'books':books, 'categories':categories})
+    # books = Book.objects.all()
+    # categories = Book.objects.values_list('Category', flat=True).distinct()
+
+    # context = {
+    #     'books': books,
+    #     'categories': categories,
+    # }
+    return render(request, 'pencarian_buku.html')
 
 def cari_buku(request):
     categories = Book.objects.values_list('Category', flat=True).distinct()
@@ -27,4 +32,3 @@ def cari_buku(request):
     else:
         books = books.order_by('Rating')
     return render(request, 'pencarian_buku.html', {'books':books, 'categories':categories, 'selected_category':selected_category})
-
