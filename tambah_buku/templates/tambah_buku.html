@@ -1,0 +1,61 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>Kutu Buku</title>
+{% endblock meta %}
+
+{% block content %}
+<main class="bg-background">
+    <div class="md:max-w-xl mx-auto bg-white py-12 px-16">
+        <!-- ['title', 'author', 'chapters', 'img_src', 'synopsis', 'reviewers', 'score', 'genre'] -->
+        <form method="POST" class="flex flex-col gap-4 font-montserrat" autocomplete="off">
+            <h3 class="font-raleway text-2xl font-bold text-center">Tambah Novel</h3>
+            {% csrf_token %}
+            <div class="flex flex-col gap-2">
+                <label for="title">Judul novel</label>
+                <input type="text" name="title" placeholder="Masukkan judul novel di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="author">Penulis</label>
+                <input type="text" name="author" placeholder="Masukkan nama penulis di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="chapters">Jumlah chapter</label>
+                <input type="number" name="chapters" placeholder="Masukkan jumlah chapter di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="img_src">Tautan sampul</label>
+                <input type="url" name="img_src" placeholder="Masukkan tautan sampul di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="synopsis">Sinopsis</label>
+                <textarea name="synopsis" placeholder="Masukkan sinopsis novel di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg"></textarea>
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="reviewers">Banyak pengulas</label>
+                <input type="number" name="reviewers" placeholder="Masukkan banyak pengulas di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="score">Rating novel</label>
+                <input type="number" name="score" placeholder="Masukkan rating novel di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="genre">Genre novel</label>
+                <input type="text" name="genre" placeholder="Masukkan genre novel di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+            </div>
+            <div class="text-center text-red-500 text-xs">
+                {% if messages %}  
+                <ul>   
+                    {% for message in messages %}  
+                        <li>{{ message }}</li>  
+                    {% endfor %}  
+                </ul>   
+                {% endif %}
+            </div>
+        
+            <input type="submit" name="submit" value="Tambahkan novel" class="bg-[#3BEDB7] py-2 rounded-2xl mt-8 hover:cursor-pointer">
+        </form>
+    </div>
+</main>
+{% endblock content %}

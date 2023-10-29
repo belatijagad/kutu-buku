@@ -5,8 +5,9 @@
       <img class src="{% static 'img/Logo.svg' %}">
     </a>
     <nav class="flex flex-wrap items-center justify-center text-foreground md:ml-auto md:mr-auto py-6 pl-4 my-auto">
-      <a href="{% url 'daftar_membaca:daftar_membaca' %}" class="mr-5 font-raleway hover:text-gray-900">Daftar Membaca</a>
       <a href="{% url 'pencarian_buku:pencarian_buku' %}" class="mr-5 font-raleway hover:text-gray-900">Cari Buku</a>
+      <a href="{% url 'daftar_membaca:daftar_membaca' %}" class="mr-5 font-raleway hover:text-gray-900">Daftar Membaca</a>
+      <a href="{% url 'tambah_buku:create_novel' %}" class="mr-5 font-raleway hover:text-gray-900">Tambah Buku</a>
     </nav>
     <div class="flex flex-row items-center h-full p-6 gap-4">
       {% if user.is_authenticated %}
