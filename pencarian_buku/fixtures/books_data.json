@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "A Light in the Attic",
             "Category": "Poetry",
@@ -19,7 +19,7 @@
     },
     {
         "pk": 2,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Tipping the Velvet",
             "Category": "Historical Fiction",
@@ -37,7 +37,7 @@
     },
     {
         "pk": 3,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Soumission",
             "Category": "Fiction",
@@ -55,7 +55,7 @@
     },
     {
         "pk": 4,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Sharp Objects",
             "Category": "Mystery",
@@ -73,7 +73,7 @@
     },
     {
         "pk": 5,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Sapiens: A Brief History of Humankind",
             "Category": "History",
@@ -91,7 +91,7 @@
     },
     {
         "pk": 6,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Requiem Red",
             "Category": "Young Adult",
@@ -109,7 +109,7 @@
     },
     {
         "pk": 7,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Dirty Little Secrets of Getting Your Dream Job",
             "Category": "Business",
@@ -127,7 +127,7 @@
     },
     {
         "pk": 8,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull",
             "Category": "Default",
@@ -145,7 +145,7 @@
     },
     {
         "pk": 9,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics",
             "Category": "Default",
@@ -163,7 +163,7 @@
     },
     {
         "pk": 10,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Black Maria",
             "Category": "Poetry",
@@ -181,7 +181,7 @@
     },
     {
         "pk": 11,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Starving Hearts (Triangular Trade Trilogy, #1)",
             "Category": "Default",
@@ -199,7 +199,7 @@
     },
     {
         "pk": 12,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Shakespeare's Sonnets",
             "Category": "Poetry",
@@ -217,7 +217,7 @@
     },
     {
         "pk": 13,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Set Me Free",
             "Category": "Young Adult",
@@ -235,7 +235,7 @@
     },
     {
         "pk": 14,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Scott Pilgrim's Precious Little Life (Scott Pilgrim #1)",
             "Category": "Sequential Art",
@@ -253,7 +253,7 @@
     },
     {
         "pk": 15,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Rip it Up and Start Again",
             "Category": "Music",
@@ -271,7 +271,7 @@
     },
     {
         "pk": 16,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Our Band Could Be Your Life: Scenes from the American Indie Underground, 1981-1991",
             "Category": "Music",
@@ -289,7 +289,7 @@
     },
     {
         "pk": 17,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Olio",
             "Category": "Poetry",
@@ -307,7 +307,7 @@
     },
     {
         "pk": 18,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Mesaerion: The Best Science Fiction Stories 1800-1849",
             "Category": "Science Fiction",
@@ -325,7 +325,7 @@
     },
     {
         "pk": 19,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Libertarianism for Beginners",
             "Category": "Politics",
@@ -343,7 +343,7 @@
     },
     {
         "pk": 20,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "It's Only the Himalayas",
             "Category": "Travel",
@@ -361,7 +361,7 @@
     },
     {
         "pk": 21,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "In Her Wake",
             "Category": "Thriller",
@@ -379,7 +379,7 @@
     },
     {
         "pk": 22,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "How Music Works",
             "Category": "Music",
@@ -397,7 +397,7 @@
     },
     {
         "pk": 23,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Foolproof Preserving: A Guide to Small Batch Jams, Jellies, Pickles, Condiments, and More: A Foolproof Guide to Making Small Batch Jams, Jellies, Pickles, Condiments, and More",
             "Category": "Food and Drink",
@@ -415,7 +415,7 @@
     },
     {
         "pk": 24,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Chase Me (Paris Nights #2)",
             "Category": "Romance",
@@ -433,7 +433,7 @@
     },
     {
         "pk": 25,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Black Dust",
             "Category": "Romance",
@@ -451,7 +451,7 @@
     },
     {
         "pk": 26,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Birdsong: A Story in Pictures",
             "Category": "Childrens",
@@ -469,7 +469,7 @@
     },
     {
         "pk": 27,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "America's Cradle of Quarterbacks: Western Pennsylvania's Football Factory from Johnny Unitas to Joe Montana",
             "Category": "Default",
@@ -487,7 +487,7 @@
     },
     {
         "pk": 28,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Aladdin and His Wonderful Lamp",
             "Category": "Default",
@@ -505,7 +505,7 @@
     },
     {
         "pk": 29,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Worlds Elsewhere: Journeys Around Shakespeare\u00e2\u0080\u0099s Globe",
             "Category": "Nonfiction",
@@ -523,7 +523,7 @@
     },
     {
         "pk": 30,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Wall and Piece",
             "Category": "Art",
@@ -541,7 +541,7 @@
     },
     {
         "pk": 31,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Four Agreements: A Practical Guide to Personal Freedom",
             "Category": "Spirituality",
@@ -559,7 +559,7 @@
     },
     {
         "pk": 32,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Five Love Languages: How to Express Heartfelt Commitment to Your Mate",
             "Category": "Nonfiction",
@@ -577,7 +577,7 @@
     },
     {
         "pk": 33,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Elephant Tree",
             "Category": "Thriller",
@@ -595,7 +595,7 @@
     },
     {
         "pk": 34,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Bear and the Piano",
             "Category": "Childrens",
@@ -613,7 +613,7 @@
     },
     {
         "pk": 35,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Sophie's World",
             "Category": "Philosophy",
@@ -631,7 +631,7 @@
     },
     {
         "pk": 36,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Penny Maybe",
             "Category": "Default",
@@ -649,7 +649,7 @@
     },
     {
         "pk": 37,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Maude (1883-1993):She Grew Up with the country",
             "Category": "Default",
@@ -667,7 +667,7 @@
     },
     {
         "pk": 38,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "In a Dark, Dark Wood",
             "Category": "Mystery",
@@ -685,7 +685,7 @@
     },
     {
         "pk": 39,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Behind Closed Doors",
             "Category": "Thriller",
@@ -703,7 +703,7 @@
     },
     {
         "pk": 40,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "You can't bury them all: Poems",
             "Category": "Poetry",
@@ -721,7 +721,7 @@
     },
     {
         "pk": 41,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Slow States of Collapse: Poems",
             "Category": "Poetry",
@@ -739,7 +739,7 @@
     },
     {
         "pk": 42,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Reasons to Stay Alive",
             "Category": "Nonfiction",
@@ -757,7 +757,7 @@
     },
     {
         "pk": 43,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Private Paris (Private #10)",
             "Category": "Fiction",
@@ -775,7 +775,7 @@
     },
     {
         "pk": 44,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "#HigherSelfie: Wake Up Your Life. Free Your Soul. Find Your Tribe.",
             "Category": "Nonfiction",
@@ -793,7 +793,7 @@
     },
     {
         "pk": 45,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Without Borders (Wanderlove #1)",
             "Category": "New Adult",
@@ -811,7 +811,7 @@
     },
     {
         "pk": 46,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "When We Collided",
             "Category": "Contemporary",
@@ -829,7 +829,7 @@
     },
     {
         "pk": 47,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "We Love You, Charlie Freeman",
             "Category": "Fiction",
@@ -847,7 +847,7 @@
     },
     {
         "pk": 48,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Untitled Collection: Sabbath Poems 2014",
             "Category": "Poetry",
@@ -865,7 +865,7 @@
     },
     {
         "pk": 49,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Unseen City: The Majesty of Pigeons, the Discreet Charm of Snails & Other Wonders of the Urban Wilderness",
             "Category": "Nonfiction",
@@ -883,7 +883,7 @@
     },
     {
         "pk": 50,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Unicorn Tracks",
             "Category": "Fantasy",
@@ -901,7 +901,7 @@
     },
     {
         "pk": 51,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Unbound: How Eight Technologies Made Us Human, Transformed Society, and Brought Our World to the Brink",
             "Category": "History",
@@ -919,7 +919,7 @@
     },
     {
         "pk": 52,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Tsubasa: WoRLD CHRoNiCLE 2 (Tsubasa WoRLD CHRoNiCLE #2)",
             "Category": "Sequential Art",
@@ -937,7 +937,7 @@
     },
     {
         "pk": 53,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Throwing Rocks at the Google Bus: How Growth Became the Enemy of Prosperity",
             "Category": "Nonfiction",
@@ -955,7 +955,7 @@
     },
     {
         "pk": 54,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "This One Summer",
             "Category": "Sequential Art",
@@ -973,7 +973,7 @@
     },
     {
         "pk": 55,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Thirst",
             "Category": "Fiction",
@@ -991,7 +991,7 @@
     },
     {
         "pk": 56,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Torch Is Passed: A Harding Family Story",
             "Category": "Add a comment",
@@ -1009,7 +1009,7 @@
     },
     {
         "pk": 57,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Secret of Dreadwillow Carse",
             "Category": "Childrens",
@@ -1027,7 +1027,7 @@
     },
     {
         "pk": 58,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Pioneer Woman Cooks: Dinnertime: Comfort Classics, Freezer Food, 16-Minute Meals, and Other Delicious Ways to Solve Supper!",
             "Category": "Food and Drink",
@@ -1045,7 +1045,7 @@
     },
     {
         "pk": 59,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Past Never Ends",
             "Category": "Mystery",
@@ -1063,7 +1063,7 @@
     },
     {
         "pk": 60,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Natural History of Us (The Fine Art of Pretending #2)",
             "Category": "Young Adult",
@@ -1081,7 +1081,7 @@
     },
     {
         "pk": 61,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Nameless City (The Nameless City #1)",
             "Category": "Sequential Art",
@@ -1099,7 +1099,7 @@
     },
     {
         "pk": 62,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Murder That Never Was (Forensic Instincts #5)",
             "Category": "Fiction",
@@ -1117,7 +1117,7 @@
     },
     {
         "pk": 63,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Most Perfect Thing: Inside (and Outside) a Bird's Egg",
             "Category": "Science",
@@ -1135,7 +1135,7 @@
     },
     {
         "pk": 64,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Mindfulness and Acceptance Workbook for Anxiety: A Guide to Breaking Free from Anxiety, Phobias, and Worry Using Acceptance and Commitment Therapy",
             "Category": "Add a comment",
@@ -1153,7 +1153,7 @@
     },
     {
         "pk": 65,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Life-Changing Magic of Tidying Up: The Japanese Art of Decluttering and Organizing",
             "Category": "Nonfiction",
@@ -1171,7 +1171,7 @@
     },
     {
         "pk": 66,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Inefficiency Assassin: Time Management Tactics for Working Smarter, Not Longer",
             "Category": "Default",
@@ -1189,7 +1189,7 @@
     },
     {
         "pk": 67,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Gutsy Girl: Escapades for Your Life of Epic Adventure",
             "Category": "Nonfiction",
@@ -1207,7 +1207,7 @@
     },
     {
         "pk": 68,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Electric Pencil: Drawings from Inside State Hospital No. 3",
             "Category": "Nonfiction",
@@ -1225,7 +1225,7 @@
     },
     {
         "pk": 69,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Death of Humanity: and the Case for Life",
             "Category": "Philosophy",
@@ -1243,7 +1243,7 @@
     },
     {
         "pk": 70,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Bulletproof Diet: Lose up to a Pound a Day, Reclaim Energy and Focus, Upgrade Your Life",
             "Category": "Health",
@@ -1261,7 +1261,7 @@
     },
     {
         "pk": 71,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Art Forger",
             "Category": "Add a comment",
@@ -1279,7 +1279,7 @@
     },
     {
         "pk": 72,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Age of Genius: The Seventeenth Century and the Birth of the Modern Mind",
             "Category": "History",
@@ -1297,7 +1297,7 @@
     },
     {
         "pk": 73,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "The Activist's Tao Te Ching: Ancient Advice for a Modern Revolution",
             "Category": "Spirituality",
@@ -1315,7 +1315,7 @@
     },
     {
         "pk": 74,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Spark Joy: An Illustrated Master Class on the Art of Organizing and Tidying Up",
             "Category": "Nonfiction",
@@ -1333,7 +1333,7 @@
     },
     {
         "pk": 75,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Soul Reader",
             "Category": "Default",
@@ -1351,7 +1351,7 @@
     },
     {
         "pk": 76,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Security",
             "Category": "Horror",
@@ -1369,7 +1369,7 @@
     },
     {
         "pk": 77,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Saga, Volume 6 (Saga (Collected Editions) #6)",
             "Category": "Fantasy",
@@ -1387,7 +1387,7 @@
     },
     {
         "pk": 78,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Saga, Volume 5 (Saga (Collected Editions) #5)",
             "Category": "Sequential Art",
@@ -1405,7 +1405,7 @@
     },
     {
         "pk": 79,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Reskilling America: Learning to Labor in the Twenty-First Century",
             "Category": "Nonfiction",
@@ -1423,7 +1423,7 @@
     },
     {
         "pk": 80,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Rat Queens, Vol. 3: Demons (Rat Queens (Collected Editions) #11-15)",
             "Category": "Sequential Art",
@@ -1441,7 +1441,7 @@
     },
     {
         "pk": 81,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Princess Jellyfish 2-in-1 Omnibus, Vol. 01 (Princess Jellyfish 2-in-1 Omnibus #1)",
             "Category": "Sequential Art",
@@ -1459,7 +1459,7 @@
     },
     {
         "pk": 82,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Princess Between Worlds (Wide-Awake Princess #5)",
             "Category": "Fantasy",
@@ -1477,7 +1477,7 @@
     },
     {
         "pk": 83,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Pop Gun War, Volume 1: Gift",
             "Category": "Sequential Art",
@@ -1495,7 +1495,7 @@
     },
     {
         "pk": 84,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Political Suicide: Missteps, Peccadilloes, Bad Calls, Backroom Hijinx, Sordid Pasts, Rotten Breaks, and Just Plain Dumb Mistakes in the Annals of American Politics",
             "Category": "History",
@@ -1513,7 +1513,7 @@
     },
     {
         "pk": 85,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Patience",
             "Category": "Sequential Art",
@@ -1531,7 +1531,7 @@
     },
     {
         "pk": 86,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Outcast, Vol. 1: A Darkness Surrounds Him (Outcast #1)",
             "Category": "Sequential Art",
@@ -1549,7 +1549,7 @@
     },
     {
         "pk": 87,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "orange: The Complete Collection 1 (orange: The Complete Collection #1)",
             "Category": "Sequential Art",
@@ -1567,7 +1567,7 @@
     },
     {
         "pk": 88,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Online Marketing for Busy Authors: A Step-By-Step Guide",
             "Category": "Self Help",
@@ -1585,7 +1585,7 @@
     },
     {
         "pk": 89,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "On a Midnight Clear",
             "Category": "Add a comment",
@@ -1603,7 +1603,7 @@
     },
     {
         "pk": 90,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Obsidian (Lux #1)",
             "Category": "Young Adult",
@@ -1621,7 +1621,7 @@
     },
     {
         "pk": 91,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "My Paris Kitchen: Recipes and Stories",
             "Category": "Food and Drink",
@@ -1639,7 +1639,7 @@
     },
     {
         "pk": 92,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Masks and Shadows",
             "Category": "Fantasy",
@@ -1657,7 +1657,7 @@
     },
     {
         "pk": 93,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Mama Tried: Traditional Italian Cooking for the Screwed, Crude, Vegan, and Tattooed",
             "Category": "Food and Drink",
@@ -1675,7 +1675,7 @@
     },
     {
         "pk": 94,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Lumberjanes, Vol. 2: Friendship to the Max (Lumberjanes #5-8)",
             "Category": "Sequential Art",
@@ -1693,7 +1693,7 @@
     },
     {
         "pk": 95,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Lumberjanes, Vol. 1: Beware the Kitten Holy (Lumberjanes #1-4)",
             "Category": "Sequential Art",
@@ -1711,7 +1711,7 @@
     },
     {
         "pk": 96,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Lumberjanes Vol. 3: A Terrible Plan (Lumberjanes #9-12)",
             "Category": "Sequential Art",
@@ -1729,7 +1729,7 @@
     },
     {
         "pk": 97,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Layered: Baking, Building, and Styling Spectacular Cakes",
             "Category": "Food and Drink",
@@ -1747,7 +1747,7 @@
     },
     {
         "pk": 98,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Judo: Seven Steps to Black Belt (an Introductory Guide for Beginners)",
             "Category": "Add a comment",
@@ -1765,7 +1765,7 @@
     },
     {
         "pk": 99,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "Join",
             "Category": "Science Fiction",
@@ -1783,7 +1783,7 @@
     },
     {
         "pk": 100,
-        "model": "pencarian_buku.book",
+        "model": "halaman_buku.book",
         "fields": {
             "Title": "In the Country We Love: My Family Divided",
             "Category": "Nonfiction",

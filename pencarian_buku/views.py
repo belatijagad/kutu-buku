@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from pencarian_buku.models import Book
+from halaman_buku.models import Book
 # Create your views here.
 
 def pencarian_buku(request):
     books = Book.objects.all()
     categories = Book.objects.values_list('Category', flat=True).distinct()
     return render(request, 'pencarian_buku.html', {'books':books, 'categories':categories})
-    
+
 def cari_buku(request):
     categories = Book.objects.values_list('Category', flat=True).distinct()
     query = request.GET.get('query')
