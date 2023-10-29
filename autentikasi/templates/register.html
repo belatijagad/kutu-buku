@@ -1,0 +1,40 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>KutuBuku</title>
+{% endblock meta %}
+
+{% block content %}
+<main class="bg-background h-screen flex items-center">
+  <div class="md:max-w-xl mx-auto flex flex-col gap-8 px-16 py-8 bg-white shadow-md">
+    <h3 class="text-center text-2xl font-[700] font-montserrat">Registrasi pengguna baru</h3>
+    <form method="POST" class="flex flex-col gap-4 font-montserrat" autocomplete="off">
+      {% csrf_token %}
+      <div class="flex flex-col gap-2">
+        <label for="username">Nama pengguna</label>
+        <input type="text" name="username" placeholder="Masukkan nama pengguna di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="password1">Kata sandi</label>
+        <input type="password" name="password1" placeholder="Masukkan kata sandi di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+      </div>
+      <div class="flex flex-col gap-2">
+        <label for="password2">Konfirmasi sandi</label>
+        <input type="password" name="password2" placeholder="Masukkan kata sandi konfirmasi di sini" class="border-[1px] border-[#010101] border-opacity-25 p-2 rounded-lg">
+      </div>
+      <div class="text-center text-red-500 text-xs">
+        {% if messages %}  
+        <ul>   
+            {% for message in messages %}  
+                <li>{{ message }}</li>  
+            {% endfor %}  
+        </ul>   
+        {% endif %}
+      </div>
+
+      <input type="submit" name="submit" value="Daftarkan akun" class="bg-[#3BEDB7] py-2 rounded-2xl mt-8 hover:cursor-pointer">
+    </form>
+  </div>
+</main>
+{% endblock content %}
