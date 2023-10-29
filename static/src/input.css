@@ -4,3 +4,46 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+@layer base {
+  :root {
+    --background: rgba(59, 237, 183, 0.15);
+    --background-secondary: rgba(59, 237, 183, 1);
+    --foreground: black;
+    --border: rgba(1, 1, 1, 0.5);
+  }
+}
+
+main{
+    overflow-y: auto;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card button.mt-3{
+  margin-top: auto;
+}
+
+.card span {
+  border-width: 0.5px;
+  padding: 2px;
+}
+
+.star-rating{
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.star{
+  color: #ccc;
+}
+
+.star.active{
+  color: gold;
+}
