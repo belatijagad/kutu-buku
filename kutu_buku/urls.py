@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('pencarian_buku.urls')),
     path('', include('bookmark.urls')),
     path('', include('autentikasi.urls')),
+    path('', include('tambah_buku.urls')),
 ]
 
 # add at the last
