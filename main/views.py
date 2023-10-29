@@ -12,9 +12,10 @@ from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from main.models import UserProfile
 from django.contrib.auth import get_user_model
+from halaman_buku.models import Book
 
 # @login_required(login_url='main:login')
-@login_required(login_url='/login')
+# @login_required(login_url='/login')
 def show_main(request):
     return render(request, 'main.html')
 

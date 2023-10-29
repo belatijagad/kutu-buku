@@ -1,15 +1,5 @@
 {
-  "name": "kutu-buku",
-  "version": "1.0.0",
-  "description": "- Alden Luthfi Arrahman\r - Ammara Pranahiza Widaryati\r - Belati Jagad Bintang Syuhada\r - Indira Arifia Rahmah\r - Rif'At Fauzan\r - Thifaalinno Fawwaz Abdi",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "tailwindcss": "^3.3.5"
   }
 }

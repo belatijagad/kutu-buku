@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulasan Buku</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="{% static 'css/stars.svg' %}">
+  <link rel="stylesheet" href="{% static 'css/style.svg' %}">
+</head>
+
+<body>
+  <!-- Dummy buku -->
+  <div class="buku flex items-center mb-4 mt-10 mx-10">
+    <img src="https://sites.middlebury.edu/origin/files/2017/06/Origin_bookshot_forweb-211x300.png"
+      alt="dan-brown_origin" class="ml-10" />
+    <div class="mx-10">
+      <div class="flex flex-col">
+        <div class="flex items-center mb-2">
+          <p class="starability-result" data-rating="5">5 stars</p>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Judul Buku</h3>
+        <p class="text-gray-600">Nama Penulis</p>
+        <div class="genre text-gray-600">Fiksi</div>
+        <div class="sinopsis">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sed asperiores illo natus iste culpa, quod
+            repellendus at magnam, dicta consequatur, ipsum perferendis quasi aspernatur excepturi voluptatem enim.
+            Inventore, facilis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias animi totam blanditiis
+            recusandae eaque fuga nam dolor similique repellat dolorum, omnis necessitatibus, asperiores assumenda,
+            reprehenderit doloremque id esse tenetur enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+            aliquid, odit unde facere ipsa quod architecto corrupti asperiores. Iusto ratione corporis, explicabo culpa
+            maiores nemo quos! Distinctio repudiandae praesentium autem?
+          </p>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde rem maxime quae illo aliquam eligendi, dicta
+            nostrum tempore labore alias suscipit dolore eaque tenetur laboriosam officia vel quam harum blanditiis?
+            Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Eos nulla aspernatur ad dolorem, impedit aperiam itaque
+            repellendus nostrum praesentium? Reiciendis, ipsa officiis adipisci voluptatem perferendis corrupti
+            voluptate
+            animi quos autem!</p>
+        </div>
+        <button type="button"
+          class="mulai-membaca text-black bg-transparent hover:bg-blue-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-transparent dark:hover:bg-blue-100 dark:focus:ring-blue-800 border border-blue-700">
+          Mulai membaca
+          <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Ulas Buku -->
+  <div class="flex flex-col items-center justify-center">
+    <h1 class="text-2xl font-semibold mb-4">Ingin mengulas buku ini?</h1>
+    <fieldset class="starability-basic">
+      <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+      <input type="radio" id="first-rate1" name="rating" value="1" />
+      <label for="first-rate1" title="Terrible">1 star</label>
+      <input type="radio" id="first-rate2" name="rating" value="2" />
+      <label for="first-rate2" title="Not good">2 stars</label>
+      <input type="radio" id="first-rate3" name="rating" value="3" />
+      <label for="first-rate3" title="Average">3 stars</label>
+      <input type="radio" id="first-rate4" name="rating" value="4" />
+      <label for="first-rate4" title="Very good">4 stars</label>
+      <input type="radio" id="first-rate5" name="rating" value="5" />
+      <label for="first-rate5" title="Amazing">5 stars</label>
+    </fieldset>
+
+    <textarea class="text-ulasan" placeholder="Tulis ulasanmu disini..."></textarea>
+
+    <button class="button-color py-2 px-4 rounded-full mt-4">Kirim ulasan</button>
+
+    <h2 class="text-xl font-semibold mt-4">Ulasan Buku</h2>
+  </div>
+
+  <!-- Bubble Ulasan-ulasan buku -->
+  <div class="flex flex-col items-center justify-center">
+    <div class="kategori-ulasan flex flex-col">
+      <label for="kategori-ulasan">Urutkan berdasarkan</label>
+      <select name="kategori-ulasan" id="kategori-ulasan" class="border rounded p-1">
+        <option value="Reputasi">Reputasi</option>
+        <option value="Popularitas">Popularitas</option>
+      </select>
+    </div>
+    <ul class="bubble-ulasan">
+      <!-- Rating Bintang -->
+      <div class="mb-4">
+        <p class="starability-result" data-rating="3">
+          Rated: 3 stars
+        </p>
+      </div>
+      {% for review in ulasan %}
+      <li>{{ review.user.username }} - {{ review.rating }} stars: {{ review.comment }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+
+</html>

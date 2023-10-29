@@ -4,4 +4,6 @@ whitenoise
 psycopg2-binary
 requests
 urllib3
+django-compressor
+django-widget-tweaks
 django-bootstrap-v5
