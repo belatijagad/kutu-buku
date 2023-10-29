@@ -4,5 +4,6 @@ from . import views
 app_name = 'halaman_buku'
 
 urlpatterns = [
-    path('<int:book_id>/', views.buku_detail, name='buku_detail'),
+    path('<str:sha256sum>/', views.buku_detail, name='buku_detail'),
+    path('tambah_ulasan/', views.tambah_ulasan, name='tambah_ulasan'),
 ]
