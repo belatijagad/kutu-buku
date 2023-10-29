@@ -44,32 +44,30 @@
             <img src="{% static 'img/sort_asc.svg' %}" alt="ascending" class="hidden" id="upArrow">
         </button>
     </div>
-    <div class="grid grid-cols-2 gap-8" id="search-results-container">
-        {% for novel in novels %}
-        <div class="flex bg-white p-8 gap-4 rounded-2xl shadow-md">
-            <img src="{{ novel.img_src }}" alt="{{ novel.title }}" width="128px" class="rounded-xl">
-            <div class="flex flex-col w-full justify-between">
-                <div>
-                    <h3 class="font-raleway font-[700] text-2xl">{{ novel.title }}</h3>
-                    <p class="font-montserrat">{{ novel.author }}</p>
+    <div class="grid grid-cols-4 gap-8" id="search-results-container">
+        {% for book in books %}
+        <div class="card bg-white p-4 rounded-lg shadow-lg flex flex-col justify-between">
+            <div class="mb-4 relative">
+                <img src="{{ book.img_src }}" alt="Buku" class="rounded-lg w-full h-auto">
+                <div class="absolute top-4 right-4">
+                    <button class="bookmark-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#34D399" class="bookmark-icon h-12 w-12">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v16l-7-3.5L4 22V6z"></path>
+                        </svg>
+                    </button>
                 </div>
-                <div class="">
-                    <p class="font-montserrat">Kamu telah membaca 0/{{ novel.chapters }} chapter</p>
-                    {% with progress=0 total=novel.chapters %}
-                    <div class="bg-gray-300 w-full h-2 rounded-lg shadow-inner">
-                        <div class="bg-blue-500 h-4 rounded-lg transition-all duration-500" style="width: 0%"></div>
-                    </div>
-                    {% endwith %}
-                    <p class="font-raleway text-[#101010] opacity-80">Terakhir membaca 28/10/2023</p>
-                </div>
-                <button class="font-raleway px-4 py-2 border-[#115BFB] border-[1px] rounded-xl self-start">Lanjut membaca</button>
+            </div>
+            <div>
+                <p class="text-lg font-bold mb-1/2">{{ book.title }}</p>
+                <p class="text-black font-normal mb-2">{{ book.author }}</p>
+                <button class="mt-5 w-full bg-white text-black rounded border border-sky-600 py-2">Baca</button>
             </div>
         </div>
         {% endfor %}
     </div>
 </main>
 
-<script src="{% static 'javascript/main.js' %}"></script>
+<script src="{% static 'javascript/main_search.js' %}"></script>
 
 <script>
     $(document).ready(function() {
