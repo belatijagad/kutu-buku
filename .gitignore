@@ -9,7 +9,6 @@ media
 # Backup files
 *.bak
 CACHE/
-static/src/output.css
 node_modules/
 
 # If you are using PyCharm
