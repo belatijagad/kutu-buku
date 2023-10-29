@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import SearchForm
-from halaman_buku.models import Book, Genre
-from django.http import HttpResponse
+from halaman_buku.models import Book
+from django.http import HttpResponse, JsonResponse
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
 
@@ -17,23 +17,39 @@ def show_main(request):
     }
     return render(request, 'daftar_membaca.html', context)
 
-def search_view(request):
-    queryset = Book.objects.all()
-    form = SearchForm(request.GET or None)
+def search(request):
+    query = request.GET.get('q', '')
+    sort_option = request.GET.get('sort', 'rating')
+    direction = request.GET.get('direction', 'desc')
+    genre_slug = request.GET.get('genre', '')
 
-    if form.is_valid():
-        query = form.cleaned_data.get('query')
-        sort_by = form.cleaned_data.get('sort_by')
+    if not query.strip():
+        results = Book.objects.all()
+    else:
+        results = Book.objects.filter(title__icontains=query)
 
-        if query:
-            queryset = queryset.filter(name__icontains=query)
+    if genre_slug:
+        results = results.filter(genre__icontains=genre_slug)
 
-        if sort_by:
-            queryset = queryset.order_by(sort_by)
+    order_prefix = '' if direction == 'asc' else '-'
 
-    context = {
-        'form': form,
-        'queryset': queryset
-    }
+    if sort_option == "rating":
+        results = results.order_by(order_prefix+'score')
+    elif sort_option == "popularity":
+        results = results.order_by(order_prefix+'reviewers')
+    elif sort_option == "alfabet":
+        results = results.order_by(order_prefix+'title')
 
-    return render(request, 'search_bar.html', context)
+    data = [{
+        'id': book.id,
+        'title': book.title,
+        'author': book.author,
+        'img_src': book.img_src,
+        'genre': book.genre,
+        'synopsis': book.synopsis,
+        'reviewers': book.reviewers,
+        'chapters': book.chapters,
+        'score': book.score,
+        'published_at': book.published_at.strftime('%Y-%m-%d')  # Date to string
+    } for book in results]
+    return JsonResponse(data, safe=False)
