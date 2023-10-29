@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 import json
-from django.core import serializers
 from halaman_buku.models import Book, Genre
+from hashlib import sha256
 
 class Command(BaseCommand):
     help = 'Imports novels from a JSON file into the database'
@@ -27,6 +27,7 @@ class Command(BaseCommand):
             novel.synopsis = novel_data['synopsis']
             novel.reviewers = novel_data['reviewers']
             novel.score = novel_data['score']
+            novel.sha256sum = sha256(novel.title.encode() + novel.author.encode()).hexdigest()
             novel.save()
 
             for genre in genres:

@@ -1,50 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
+{% extends '_base.html' %}
 {% load static %}
+{% load mathfilters %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ulasan Buku</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="{% static 'css/stars.svg' %}">
-  <link rel="stylesheet" href="{% static 'css/style.svg' %}">
-</head>
+{% block meta %}
+<title>KutuBuku</title>
+{% endblock meta %}
 
-<body>
-  <!-- Dummy buku -->
-  <div class="buku flex items-center mb-4 mt-10 mx-10">
-    <img src="https://sites.middlebury.edu/origin/files/2017/06/Origin_bookshot_forweb-211x300.png"
-      alt="dan-brown_origin" class="ml-10" />
-    <div class="mx-10">
-      <div class="flex flex-col">
-        <div class="flex items-center mb-2">
-          <p class="starability-result" data-rating="5">5 stars</p>
+{% block content %}
+<main>
+  <div class="pt-36">
+    <div class="mx-60 flex flex-row">
+      <img class="object-contain h-96" src="{{ book.img_src }}">
+      <div class="ml-20 w-full flex flex-col space-y-10">
+        <div class="mb-2">
+          {% for i in "12345"|make_list %}
+            {% if i|add:0 <= book.score|intdiv:20 %} <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-20 h-20 inline-block text-yellow-400">
+              <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+              </svg>
+            {% else %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-20 h-20 inline-block text-gray-400">
+              <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+              </svg>
+            {% endif %}
+          {% endfor %}
         </div>
-        <h3 class="text-xl font-semibold mb-2">Judul Buku</h3>
-        <p class="text-gray-600">Nama Penulis</p>
-        <div class="genre text-gray-600">Fiksi</div>
-        <div class="sinopsis">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sed asperiores illo natus iste culpa, quod
-            repellendus at magnam, dicta consequatur, ipsum perferendis quasi aspernatur excepturi voluptatem enim.
-            Inventore, facilis?Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias animi totam blanditiis
-            recusandae eaque fuga nam dolor similique repellat dolorum, omnis necessitatibus, asperiores assumenda,
-            reprehenderit doloremque id esse tenetur enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
-            aliquid, odit unde facere ipsa quod architecto corrupti asperiores. Iusto ratione corporis, explicabo culpa
-            maiores nemo quos! Distinctio repudiandae praesentium autem?
-          </p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde rem maxime quae illo aliquam eligendi, dicta
-            nostrum tempore labore alias suscipit dolore eaque tenetur laboriosam officia vel quam harum blanditiis?
-            Lorem
-            ipsum dolor, sit amet consectetur adipisicing elit. Eos nulla aspernatur ad dolorem, impedit aperiam itaque
-            repellendus nostrum praesentium? Reiciendis, ipsa officiis adipisci voluptatem perferendis corrupti
-            voluptate
-            animi quos autem!</p>
-        </div>
-        <button type="button"
-          class="mulai-membaca text-black bg-transparent hover:bg-blue-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-transparent dark:hover:bg-blue-100 dark:focus:ring-blue-800 border border-blue-700">
+        <h1 class="text-5xl font-raleway font-bold">{{ book.title }}</h1>
+        <p class="text-lg font-raleway font-light">{{ book.author }}</p>
+        <button class="text-sm font-raleway font-light border border-bg_secondary rounded-full py-2">{{ book.author }}</button>
+        <p class="text-base font-raleway font-light">{{ book.synopsis }}</p>
+        <button type="button" class="w-60 mulai-membaca text-black bg-transparent hover:bg-blue-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-transparent dark:hover:bg-blue-100 dark:focus:ring-blue-800 border border-blue-700">
           Mulai membaca
           <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
             viewBox="0 0 14 10">
@@ -54,54 +37,54 @@
         </button>
       </div>
     </div>
-  </div>
+    <h1 class="flex w-full text-5xl font-raleway font-bold my-10 items-center justify-center">Ingin Mengulas Buku Ini?</h1>
+    <div class="text-center">
+        <span class="flex flex-row-reverse justify-center pb-5">
+          <button class="w-8 h-8 text-gray-600 cursor-pointer peer peer-focus:text-yellow-400 peer-hover:text-yellow-400 hover:text-yellow-400 focus:text-yellow-400 duration-100 star">
+            <svg width="23" height="23" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+            </svg>
+          </button>
 
+          <button class="w-8 h-8 text-gray-600 cursor-pointer peer peer-focus:text-yellow-400 peer-hover:text-yellow-400 hover:text-yellow-400 focus:text-yellow-400 duration-100 star">
+            <svg width="23" height="23" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+            </svg>
+          </button>
 
-  <!-- Ulas Buku -->
-  <div class="flex flex-col items-center justify-center">
-    <h1 class="text-2xl font-semibold mb-4">Ingin mengulas buku ini?</h1>
-    <fieldset class="starability-basic">
-      <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
-      <input type="radio" id="first-rate1" name="rating" value="1" />
-      <label for="first-rate1" title="Terrible">1 star</label>
-      <input type="radio" id="first-rate2" name="rating" value="2" />
-      <label for="first-rate2" title="Not good">2 stars</label>
-      <input type="radio" id="first-rate3" name="rating" value="3" />
-      <label for="first-rate3" title="Average">3 stars</label>
-      <input type="radio" id="first-rate4" name="rating" value="4" />
-      <label for="first-rate4" title="Very good">4 stars</label>
-      <input type="radio" id="first-rate5" name="rating" value="5" />
-      <label for="first-rate5" title="Amazing">5 stars</label>
-    </fieldset>
+          <button class="w-8 h-8 text-gray-600 cursor-pointer peer peer-focus:text-yellow-400 peer-hover:text-yellow-400 hover:text-yellow-400 focus:text-yellow-400 duration-100 star">
+            <svg width="23" height="23" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+            </svg>
+          </button>
 
-    <textarea class="text-ulasan" placeholder="Tulis ulasanmu disini..."></textarea>
+          <button class="w-8 h-8 text-gray-600 cursor-pointer peer peer-focus:text-yellow-400 peer-hover:text-yellow-400 hover:text-yellow-400 focus:text-yellow-400 duration-100 star">
+            <svg width="23" height="23" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+            </svg>
+          </button>
 
-    <button class="button-color py-2 px-4 rounded-full mt-4">Kirim ulasan</button>
-
-    <h2 class="text-xl font-semibold mt-4">Ulasan Buku</h2>
-  </div>
-
-  <!-- Bubble Ulasan-ulasan buku -->
-  <div class="flex flex-col items-center justify-center">
-    <div class="kategori-ulasan flex flex-col">
-      <label for="kategori-ulasan">Urutkan berdasarkan</label>
-      <select name="kategori-ulasan" id="kategori-ulasan" class="border rounded p-1">
-        <option value="Reputasi">Reputasi</option>
-        <option value="Popularitas">Popularitas</option>
-      </select>
-    </div>
-    <ul class="bubble-ulasan">
-      <!-- Rating Bintang -->
-      <div class="mb-4">
-        <p class="starability-result" data-rating="3">
-          Rated: 3 stars
-        </p>
+          <button class="w-8 h-8 text-gray-600 cursor-pointer peer peer-focus:text-yellow-400 peer-hover:text-yellow-400 hover:text-yellow-400 focus:text-yellow-400 duration-100 star">
+            <svg width="23" height="23" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+            </svg>
+          </button>
+        </span>
       </div>
-      {% for review in ulasan %}
-      <li>{{ review.user.username }} - {{ review.rating }} stars: {{ review.comment }}</li>
+    <form method="post" class="items-center justify-center text-center flex flex-col pb-20">
+      {% csrf_token %}
+      <textarea class="w-5/12 h-32 mb-5 border border-bg_secondary" placeholder="Tulis ulasanmu disini..." name="comment"></textarea>
+      <button class="py-2 px-4 w-32 font-raleway transition-all duration-150 bg-bg_secondary rounded-full shadow outline-none active:bg-background hover:shadow-md focus:outline-none ease" type="submit" value="Submit">Submit</button>
+    </form>
+    <h1 class="flex w-full text-5xl font-raleway font-bold my-10 items-center justify-center">Ulasan Buku</h1>
+    <div class="ulasan_ulasan items-center justify-center flex flex-col font-raleway">
+      {% for u in ulasan %}
+        <div class="p-2 items-start w-5/12 h-32 bg-bg_secondary rounded-xl m-5">
+          <p class="text-lg font-bold">{{ u.user }}</p>
+          <p>{{ u.comment }}</p>
+        </div>
       {% endfor %}
-    </ul>
+    </div>
   </div>
-</body>
-
-</html>
+</main>
+{% endblock content %}
