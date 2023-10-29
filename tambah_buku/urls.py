@@ -1,7 +1,8 @@
 from django.urls import path, include
-from main.views import show_main
+from tambah_buku.views import create_novel
 
-app_name = 'main'
+app_name = 'tambah_buku'
 
 urlpatterns = [
+    path('tambah-buku', create_novel, name='create_novel'),
 ]
