@@ -1,0 +1,133 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>KutuBuku</title>
+{% endblock meta %}
+
+{% block content %}
+<main class="h-full font-bold bg-white mb-4">
+    <div class="container mx-auto py-5 px-5">
+        <div class="flex flex-col w-full mx-auto text-center mb-5">
+            <h3 class="text-4xl mb-4">Mau baca buku apa hari ini?</h3>
+            <form action="{% url 'pencarian_buku:cari_buku' %}" method="get" class="flex-grow">
+            <div class="flex items-center w-full mb-5">
+
+                <!-- Formulir pencarian di sini -->
+                    <div class="flex space-x-4 items-center border p-2 rounded-full shadow-md w-full border-black">
+                        <input type="text" name="query" placeholder="Cari buku di sini!" class="flex-grow bg-transparent outline-none px-3 font-normal">
+                        <button type="submit" class="mr-2">
+                            <img src="{% static 'img/Search.jpg' %}" alt="Search Icon" class="w-3 h-3 mr-3">
+                        </button>
+                    </div>
+                    
+                        <select name="Category" class="border rounded p-1.5 ml-8 font-normal border-black">
+                            <option value="">Category</option>
+                            {% for category in categories %}
+                                {% if category == selected_category %}
+                                    <option value="{{ category }}" selected>{{ category }}</option>
+                                {% else %}
+                                    <option value="{{ category }}">{{ category }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    
+                        <select name='urutan_rating' id="ratingOrderDropdown" class="border rounded p-1.5 ml-4 font-normal border-black">
+                            <option value="ratingTertinggi">Rating Tertinggi</option>
+                            <option value="ratingTerendah">Rating Terendah</option>
+                        </select>
+                        <button type="button" class="ml-4 p-1.5 border-black sorting-button" data-sorting="{% if request.GET.urutan_rating == 'ratingTerendah' %}descending{% else %}ascending{% endif %}">
+                            <img src="{% if request.GET.urutan_rating == 'ratingTerendah' %}{% static 'img/SortingDsc.jpg' %}{% else %}{% static 'img/SortingAsc.jpg' %}{% endif %}" alt="Sorting Icon" class="w-3/5 h-3/5">
+                        </button>                       
+                    </div>
+            </form>
+                    
+            <!-- Card Section -->
+            <div class="grid grid-cols-4 gap-8">
+                {% for book in books %}
+                <div class="card bg-white p-4 rounded-lg shadow-lg">
+                    <div class="mb-4 relative">
+                        <img src="{{ book.Image }}" alt="Buku" class="rounded-lg w-full h-auto">
+                        <div class="absolute top-4 right-4">
+                            <button class="bookmark-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#34D399" class="bookmark-icon h-12 w-12">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="8" d="M4 6a2 2 0 012-2h12a2 2 0 012 2v16l-7-3.5L4 22V6z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        {% for i in "12345"|make_list %}
+                            {% if i|add:"0" <= book.Rating %}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-4 h-4 inline-block text-yellow-400">
+                                    <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+                                </svg>
+                            {% else %}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" viewBox="0 0 24 24" class="w-4 h-4 inline-block text-yellow-400">
+                                    <path d="M12 2l2.4 7.2h7.6l-6.16 4.68l2.56 7.44l-6.4-4.64l-6.4 4.64l2.56-7.44l-6.16-4.68h7.6z"></path>
+                                </svg>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    
+                    <p class="text-lg font-bold mb-1/2">{{ book.Title }}</p>
+                    <p class="text-black font-normal mb-2">Author</p>
+                    <span class="bg-white border border-emerald-400 rounded-full py-1 px-2 text-sm font-normal">{{ book.Category }}</span>
+                    <button class="mt-5 w-full bg-white text-black rounded border border-sky-600 py-2">Baca</button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    let bookmarkButtons = document.querySelectorAll('.bookmark-button');
+    
+    bookmarkButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            let icon = button.querySelector('.bookmark-icon');
+            if(icon.style.fill === "" || icon.style.fill === "none") {
+                icon.style.fill = "#34D399";
+            } else {
+                icon.style.fill = "none";
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let sortingButton = document.querySelector('.sorting-button');
+        let ratingDropdown = document.getElementById('ratingOrderDropdown');
+        function updateDropdownOrder(currentSorting) {
+            if (currentSorting === "ascending") {
+                ratingDropdown.innerHTML = `
+                    <option value="ratingTertinggi">Rating Tertinggi</option>
+                    <option value="ratingTerendah">Rating Terendah</option>
+                `;
+            } else {
+                ratingDropdown.innerHTML = `
+                    <option value="ratingTerendah">Rating Terendah</option>
+                    <option value="ratingTertinggi">Rating Tertinggi</option>
+                `;
+            }
+        }
+
+        updateDropdownOrder(sortingButton.getAttribute('data-sorting'));
+
+        sortingButton.addEventListener('click', function() {
+            let currentSorting = sortingButton.getAttribute('data-sorting');
+            
+            if (currentSorting === "ascending") {
+                ratingDropdown.value = "ratingTerendah";
+                sortingButton.setAttribute('data-sorting', 'descending');
+            } else {
+                ratingDropdown.value = "ratingTertinggi";
+                sortingButton.setAttribute('data-sorting', 'ascending');
+            }
+            updateDropdownOrder(sortingButton.getAttribute('data-sorting'));
+            ratingDropdown.form.submit();
+        });
+    });
+    
+</script>
+{% endblock content %}
