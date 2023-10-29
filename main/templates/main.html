@@ -1,26 +1,92 @@
-{% extends '_base.html' %}
-{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Buku</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        input[type="text"], textarea, input[type="checkbox"] {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="text"]::placeholder, textarea::placeholder {
+            color: #999;
+        }
+        input[type="checkbox"] {
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+        label {
+            display: block;
+            text-align: left;
+        }
+        .blue-text {
+            color: blue;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-raleway {
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="font-montserrat">Tambah Buku</h2>
+        <form action="{% url 'add_book' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            <label for="nama_buku" class="font-raleway">Nama Buku</label>
+            <input type="text" id="nama_buku" name="nama_buku" placeholder="Masukkan nama buku di sini" required>
+            
+            <label for="genre_buku" class="font-raleway">Genre Buku</label>
+            <input type="text" id="genre_buku" name "genre_buku" placeholder="Masukkan genre buku di sini" required>
 
-{% block meta %}
-<title>KutuBuku</title>
-{% endblock meta %}
+            <label for="jumlah_halaman" class="font-raleway">Jumlah Halaman Buku</label>
+            <input type="text" id="jumlah_halaman" name="jumlah_halaman" placeholder="Masukkan jumlah halaman buku di sini" required>
 
-{% block content %}
-<main>
-    <div class="w-screen h-screen bg-background">
-        <div class="flex h-full font-[700] w-50 my-auto justify-center items-center">
-            <div class="flex flex-row w-120">
-                <img src="{% static 'img/BookWorm.svg' %}" class="h-1/2 m-5">
-                <div class="flex justify-center justify-items-start w-96 flex-col m-5">
-                    <h1 class="text-5xl leading-snug font-raleway">Cari, Ulas Buku, dan Buat Daftar Bacamu</h1>
-                    <input href="#_" class="px-4 py-2 font-light transition-all duration-150 bg-white rounded-full shadow outline-none active:bg-gray-100 hover:shadow-md focus:outline-none ease my-3" placeholder="Cari buku Sekarang" type="text" id="queryBuku">
-                    </input>
-                </div>
-            </div>
-        </div>
+            <label for="link_cover" class="font-raleway">Link Cover Buku</label>
+            <input type="text" id="link_cover" name="link_cover" placeholder="Masukkan link menuju gambar cover di sini" required>
+
+            <label for="sinopsis_buku" class="font-raleway">Sinopsis Buku</label>
+            <textarea id="sinopsis_buku" name="sinopsis_buku" rows="4" placeholder="Masukkan sinopsis buku di sini" required></textarea>
+
+            <label for="syarat_dan_ketentuan" class="font-raleway">
+                <input type="checkbox" id="syarat_dan_ketentuan" name="syarat_dan_ketentuan" required>
+                <span class="blue-text">Saya menyetujui syarat dan ketentuan yang berlaku</span>
+            </label>
+
+            <button type="submit" class="font-montserrat">Terbitkan Buku</button>
+        </form>
     </div>
-    <div class="w-screen h-screen bg-white">
-
-    </div>
-</main>
-{% endblock content %}
+</body>
+</html>
