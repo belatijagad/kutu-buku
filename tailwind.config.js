@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './templates/**/*.html',
@@ -8,7 +9,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Using modern `rgb`
         background: 'var(--background)',
         bg_secondary: 'var(--background-secondary)',
         foreground: 'var(--foreground)',
@@ -22,4 +22,3 @@ module.exports = {
   },
   plugins: [],
 }
-
