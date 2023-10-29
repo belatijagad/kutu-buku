@@ -17,7 +17,8 @@ Literasi adalah keterampilan dasar esensial bagi setiap individu di era informas
   - Ammara Pranahiza Widaryati (80%)
   - Belati Jagad Bintang Syuhada (20%)
 - Halaman melihat daftar buku
-  - Rif'At Fauzan (100%)
+  - Rif'At Fauzan (95%)
+  - Alden Luthfi Arrahman (5%)
 - Halaman buku individu
   - Indira Arifia Rahmah (80%)
   - Alden Luthfi Arrahman (20%)
