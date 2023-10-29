@@ -1,13 +1,15 @@
 from django.urls import include, path
-from autentikasi.views import login
-from autentikasi.views import logout
-from autentikasi.views import register
+from autentikasi.views import (
+    register,
+    login_user,
+    logout_user,
+)
 
 
 app_name = 'autentikasi'
 
 urlpatterns = [
-    path('login/', login, name='login'),
-    path('logout/', logout, name='logout'),
+    path('login/', login_user, name='login'),
+    path('logout/', logout_user, name='logout'),
     path('register/', register, name='register'),
 ]

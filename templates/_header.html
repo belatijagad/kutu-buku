@@ -1,18 +1,26 @@
 {% load static %}
-<header class="z-40 fixed w-full bg-white text-gray-700 border-b border-border body-font">
+<header class="z-40 w-full bg-white text-gray-700 border-b border-border body-font">
   <div class="align-middle container flex flex-col items-start justify-between mx-auto md:flex-row">
-    <a class="flex my-auto items-center font-raleway text-background title-font">
+    <a class="flex my-auto items-center font-raleway text-background title-font" href="{% url 'main:show_main' %}">
       <img src="{% static 'img/Logo.svg' %}">
     </a>
     <nav class="flex flex-wrap items-center justify-center text-foreground md:ml-auto md:mr-auto py-6">
-      <a href="#_" class="mr-5 font-raleway hover:text-gray-900">Daftar Membaca</a>
-      <a href="#_" class="mr-5 font-raleway hover:text-gray-900">Cari Buku</a>
+      <a href="{% url 'daftar_membaca:daftar_membaca' %}" class="mr-5 font-raleway hover:text-gray-900">Daftar Membaca</a>
+      <a href="{% url 'pencarian_buku:cari_buku' %}" class="mr-5 font-raleway hover:text-gray-900">Cari Buku</a>
     </nav>
-    <div class="items-center h-full p-6">
-      <a href="#_" class="mr-5 font-raleway hover:text-gray-900">Login</a>
-      <a href="#_" class="px-4 py-2 font-raleway transition-all duration-150 bg-bg_secondary rounded-full shadow outline-none active:bg-background hover:shadow-md focus:outline-none ease">
-        Sign Up
-      </a>
+    <div class="flex flex-row items-center h-full p-6 gap-4">
+      {% if user.is_authenticated %}
+        <p class="font-montserrat">Halo, {{ user.username }}</p>
+        <form action="{% url 'autentikasi:logout' %}" method="post">
+          {% csrf_token %}
+          <input type="submit" value="Keluar" class="px-4 py-2 font-raleway transition-all duration-150 bg-bg_secondary rounded-full shadow outline-none active:bg-background hover:shadow-md focus:outline-none ease hover:cursor-pointer">
+        </form>
+      {% else %}
+        <a href="{% url 'autentikasi:login' %}" class="mr-5 font-raleway hover:text-gray-900">Login</a>
+        <a href="{% url 'autentikasi:register' %}" class="px-4 py-2 font-raleway transition-all duration-150 bg-bg_secondary rounded-full shadow outline-none active:bg-background hover:shadow-md focus:outline-none ease">
+          Sign Up
+        </a>
+      {% endif %}
     </div>
   </div>
 </header>
