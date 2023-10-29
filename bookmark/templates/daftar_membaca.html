@@ -1,0 +1,19 @@
+{% extends '_base.html' %}
+
+{% block meta %}
+<title>KutuBuku</title>
+{% endblock meta %}
+
+{% block content %}
+<main class="container mx-auto">
+    <h1 class="font-raleway text-center font-[700] text-2xl py-56">Daftar Membaca</h1>
+    <div class="grid grid-cols-2 gap-4">
+        {% for novel in novels %}
+        <div class="flex">
+            <img src="{{ novel.img_src }}" alt="{{ novel.title }}" width="200px">
+            <p>{{ novel.title }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock content %}
