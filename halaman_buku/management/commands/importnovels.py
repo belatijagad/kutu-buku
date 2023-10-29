@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 import json
 from django.core import serializers
-from halaman_buku.models import Book, Genre
+from halaman_buku.models import Book
 
 class Command(BaseCommand):
     help = 'Imports novels from a JSON file into the database'
@@ -11,14 +11,9 @@ class Command(BaseCommand):
             data = json.load(file)
 
         for novel_data in data:
-            # Extract genre names
-            genre_names = novel_data.pop('genre', [])
-
-            # Create or fetch related genres
-            genres = [Genre.objects.get_or_create(name=genre_name)[0] for genre_name in genre_names]
-
-            # print(novel_data['reviewers']);
-            # break
+            genres = ''
+            for genre in novel_data['genres']:
+                genres += f'{genre}, '
             novel = Book()
             novel.title = novel_data['title']
             novel.author = novel_data['author']
@@ -27,9 +22,7 @@ class Command(BaseCommand):
             novel.synopsis = novel_data['synopsis']
             novel.reviewers = novel_data['reviewers']
             novel.score = novel_data['score']
+            novel.genre = genres
             novel.save()
-
-            for genre in genres:
-                novel.genres.add(genre)
 
         self.stdout.write(self.style.SUCCESS('Successfully imported novels'))
