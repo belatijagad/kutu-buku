@@ -11,6 +11,7 @@
 Literasi adalah keterampilan dasar esensial bagi setiap individu di era informasi saat ini. Lebih dari sekadar kemampuan membaca dan menulis, literasi memampukan seseorang untuk memahami, menganalisa, dan menafsirkan informasi dengan kritis. Dengan keterampilan literasi yang baik, individu dapat membuat keputusan yang lebih tepat, membedakan fakta dari opini, serta menyaring informasi yang tidak relevan atau menyesatkan. Di tengah derasnya arus informasi, literasi menjadi benteng pertahanan terhadap kesesatan informasi dan memberikan fondasi untuk pembelajaran sepanjang hayat. Tanpa literasi, seseorang akan kesulitan menghadapi tantangan di dunia modern dan berpotensi terpinggirkan dalam masyarakat yang semakin dinamis. Untuk mendukung kegiatan literasi, kami membuat sebuah aplikasi katalog buku. Aplikasi ini memuat fitur untuk menambahkan buku, menampilkan berbagai jenis buku, mengulas buku, dan menandakan buku yang sudah ada untuk masuk ke dalam *to-read list*. 
 
 ## Daftar modul yang akan diimplementasikan
+Berikut adalah modul-modul yang diimplementasikan serta kontribusi setiap anggota terhadap modul yang diimplementasikan.
 - Halaman utama:
   - Alden Luthfi Arrahman (100%)
 - Halaman autentikasi (registrasi dan *login*)
