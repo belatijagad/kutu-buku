@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kutu Buku</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    {% load static %}
+    <header class="bg-white text-gray-700 border-b border-border body-font">
+      <div class="align-middle container flex flex-col items-start justify-between mx-auto md:flex-row">
+        <a class="flex my-auto items-center font-raleway text-background title-font">
+          <img src="{% static 'img/Logo.svg' %}">
+        </a>
+        <nav class="flex flex-wrap items-center justify-center text-foreground md:ml-auto md:mr-auto py-6 pl-24">
+          <a href="#_" class="mr-5 font-raleway hover:text-gray-900">Daftar Membaca</a>
+          <a href="#_" class="mr-5 font-raleway hover:text-gray-900">Cari Buku</a>
+        </nav>
+        <div class="items-center h-full p-6">
+          <a href="{% url 'main:login' %}" class="mr-5 font-raleway hover:text-gray-900">Login</a>
+          <a href="{% url 'main:register' %}" class="px-4 py-2 font-raleway transition-all duration-150 bg-bg_secondary rounded-full shadow outline-none active:bg-background hover:shadow-md focus:outline-none ease">
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </header>
+  <section style="background-color: #3BEDB740;" class="py-12">
+    <div class="container mx-auto bg-white rounded p-8 h-screen flex flex-col justify-center items-center" style="max-width: 500px; max-height: 500px;">
+        <h2 class="text-2xl font-Montserrat font-bold text-center">Login Pengguna</h2>
+        <form class="max-w-md mx-auto mt-8 w-full" method="post">
+            {% csrf_token %}
+            <div class="mb-4">
+                <label class="block" for="username">Nama pengguna</label>
+                <input class="border border-gray-300 px-4 py-2 w-full rounded" id="username" name="username" required="" type="text" placeholder="Masukkan nama pengguna di sini">
+            </div>
+            <div class="mb-4">
+                <label class="block" for="password">Kata sandi</label>
+                <input class="border border-gray-300 px-4 py-2 w-full rounded" id="password" name="password" required="" type="password" placeholder="Masukkan kata sandi di sini">
+            </div>
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="text-red-500 text-center mb-2">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+            <div class="text-center mt-4">
+                <button style="background-color: #3BEDB7;" class="bg-bg_secondary hover:bg-background text-gray-900 py-2 px-4 rounded-full shadow outline-none active:bg-background hover:shadow-md focus:outline-none ease" type="submit">Masuk</button>
+            </div>
+            <div class="mb-4">
+                <label class="block" for="role">Role</label>
+                <select class="border border-gray-300 px-4 py-2 w-full rounded" id="role" name="role" required="">
+                    <option value="user">User</option>
+                    <option value="moderator">Moderator</option>
+                </select>
+            </div>
+            <input type="hidden" id="hiddenRole" name="role">
+            
+        </form>
+        <p class="font-Montserrat text-center mt-4">Belum punya akun? <a href="{% url 'main:register' %}">Sign up</a></p>
+      </div>
+  </section>
+  <footer class="relative bg-bg_secondary py-3" >
+    <div class="container mx-auto px-4">
+      <div class="w-full flex flex-row items-center justify-center font-raleway">
+        <nav class="">
+          <a href="#_" class="mr-5 hover:text-gray-900">Daftar Membaca</a>
+          <a href="#_" class="mr-5 hover:text-gray-900">Cari Buku</a>
+        </nav>
+      </div>
+      <hr class="my-3 border-border">
+      <div class="flex flex-wrap items-center md:justify-between justify-center">
+        <div class="w-full px-4 mx-auto text-center">
+          <div class="text-sm text-foreground py-1 font-raleway">
+            Kelompok 10 - PBP B
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    
+    // JSON data for positioning and text content
+    var data = {
+      "comps": [
+        {
+          "id": 0,
+          "h": 29,
+          "w": 28,
+          "pos": [7, 11, 35, 40],
+          "type": "Compo"
+        },
+        {
+          "id": 1,
+          "h": 20,
+          "w": 50,
+          "pos": [740, 16, 790, 36],
+          "type": "Compo"
+        },
+        {
+          "id": 2,
+          "h": 324,
+          "w": 319,
+          "pos": [239, 128, 558, 452],
+          "type": "Block"
+        },
+        {
+          "id": 3,
+          "h": 21,
+          "w": 223,
+          "pos": [287, 225, 510, 246],
+          "type": "Compo"
+        },
+        {
+          "id": 4,
+          "h": 21,
+          "w": 223,
+          "pos": [287, 270, 510, 291],
+          "type": "Compo"
+        },
+        {
+          "id": 5,
+          "h": 20,
+          "w": 223,
+          "pos": [287, 315, 510, 335],
+          "type": "Compo"
+        },
+        {
+          "id": 6,
+          "h": 20,
+          "w": 223,
+          "pos": [287, 378, 510, 398],
+          "type": "Compo"
+        },
+        {
+          "id": 7,
+          "h": 8,
+          "w": 6,
+          "pos": [436, 554, 442, 562],
+          "type": "Compo"
+        },
+        {
+          "id": 8,
+          "h": 7,
+          "w": 50,
+          "pos": [45, 21, 95, 28],
+          "type": "Text",
+          "text": "KutuBuku"
+        },
+        {
+          "id": 9,
+          "h": 6,
+          "w": 67,
+          "pos": [340, 22, 407, 28],
+          "type": "Text",
+          "text": "Daftar Membaca"
+        },
+        {
+          "id": 10,
+          "h": 6,
+          "w": 39,
+          "pos": [425, 21, 464, 27],
+          "type": "Text",
+          "text": "Cari Buku"
+        },
+        {
+          "id": 11,
+          "h": 17,
+          "w": 240,
+          "pos": [278, 165, 518, 182],
+          "type": "Text",
+        }  
+    ]
+}
+
+        document.getElementById('role').addEventListener('change', function() {
+                if (this.value === 'moderator') {
+                    window.location.href = "{% url 'main:login_moderator' %}";
+                } else {
+                    window.location.href = "{% url 'main:login' %}";
+                }
+            });
+        </script>
+    </body>
+</html>

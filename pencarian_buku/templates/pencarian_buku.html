@@ -6,8 +6,8 @@
 {% endblock meta %}
 
 {% block content %}
-<main class="h-full font-bold bg-white mb-4">
-    <div class="container mx-auto py-5 px-5">
+<main class="h-full font-bold bg-white mb-4 font-raleway">
+    <div class="container mx-auto pb-5 px-5 pt-24">
         <div class="flex flex-col w-full mx-auto text-center mb-5">
             <h3 class="text-4xl mb-4">Mau baca buku apa hari ini?</h3>
             <form action="{% url 'pencarian_buku:cari_buku' %}" method="get" class="flex-grow">
@@ -20,7 +20,6 @@
                             <img src="{% static 'img/Search.jpg' %}" alt="Search Icon" class="w-3 h-3 mr-3">
                         </button>
                     </div>
-                    
                         <select name="Category" class="border rounded p-1.5 ml-8 font-normal border-black">
                             <option value="">Category</option>
                             {% for category in categories %}
@@ -31,17 +30,15 @@
                                 {% endif %}
                             {% endfor %}
                         </select>
-                    
                         <select name='urutan_rating' id="ratingOrderDropdown" class="border rounded p-1.5 ml-4 font-normal border-black">
                             <option value="ratingTertinggi">Rating Tertinggi</option>
                             <option value="ratingTerendah">Rating Terendah</option>
                         </select>
                         <button type="button" class="ml-4 p-1.5 border-black sorting-button" data-sorting="{% if request.GET.urutan_rating == 'ratingTerendah' %}descending{% else %}ascending{% endif %}">
                             <img src="{% if request.GET.urutan_rating == 'ratingTerendah' %}{% static 'img/SortingDsc.jpg' %}{% else %}{% static 'img/SortingAsc.jpg' %}{% endif %}" alt="Sorting Icon" class="w-3/5 h-3/5">
-                        </button>                       
+                        </button>
                     </div>
             </form>
-                    
             <!-- Card Section -->
             <div class="grid grid-cols-4 gap-8">
                 {% for book in books %}
@@ -69,7 +66,6 @@
                             {% endif %}
                         {% endfor %}
                     </div>
-                    
                     <p class="text-lg font-bold mb-1/2">{{ book.Title }}</p>
                     <p class="text-black font-normal mb-2">Author</p>
                     <span class="bg-white border border-emerald-400 rounded-full py-1 px-2 text-sm font-normal">{{ book.Category }}</span>
@@ -83,7 +79,6 @@
 
 <script>
     let bookmarkButtons = document.querySelectorAll('.bookmark-button');
-    
     bookmarkButtons.forEach(button => {
         button.addEventListener('click', function() {
             let icon = button.querySelector('.bookmark-icon');
@@ -116,7 +111,6 @@
 
         sortingButton.addEventListener('click', function() {
             let currentSorting = sortingButton.getAttribute('data-sorting');
-            
             if (currentSorting === "ascending") {
                 ratingDropdown.value = "ratingTerendah";
                 sortingButton.setAttribute('data-sorting', 'descending');
@@ -128,6 +122,5 @@
             ratingDropdown.form.submit();
         });
     });
-    
 </script>
 {% endblock content %}
